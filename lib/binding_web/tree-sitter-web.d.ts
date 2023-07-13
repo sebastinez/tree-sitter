@@ -174,6 +174,9 @@ declare module 'web-tree-sitter' {
       matches(node: SyntaxNode, startPosition?: Point, endPosition?: Point): QueryMatch[];
       captures(node: SyntaxNode, startPosition?: Point, endPosition?: Point): QueryCapture[];
       predicatesForPattern(patternIndex: number): PredicateResult[];
+      patternCount(): number;
+      disablePattern(index: number): void;
+      startByteForPattern(index: number): number;
     }
   }
 
